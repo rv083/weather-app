@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h2>Weather Info</h2>
+    
+    <input type="text" id="cityInput" placeholder="Enter city name" autocomplete="off" />
+    <ul id="suggestions" class="suggestions-list"></ul>
+    
+    <button onclick="getWeather()">Get Weather</button>
+    <p id="error" class="error-message"></p>
+
+    <div id="loading" class="loading" style="display:none;">Loading...</div>
+
+    <div id="weatherDetails" style="margin-top: 20px; display:none;">
+      <h3 id="city">City Name</h3>
+      <div class="temp-weather">
+        <img id="weatherIcon" src="" alt="weather icon" />
+        <p id="temperature">--°C</p>
+      </div>
+      <p id="weather">--</p>
+      <div class="extra-info">
+        <p><strong>Humidity:</strong> <span id="humidity">--%</span></p>
+        <p><strong>Wind:</strong> <span id="wind">-- km/h</span></p>
+        <p><strong>Local Time:</strong> <span id="localtime">--</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

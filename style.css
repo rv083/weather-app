@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+  color: #333;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #0072ff;
+}
+
+.card input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 1.5px solid #0072ff;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.card input:focus {
+  border-color: #005bb5;
+}
+
+.suggestions-list {
+  list-style: none;
+  margin: 5px 0 0 0;
+  padding: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #0072ff;
+  border-radius: 0 0 20px 20px;
+  background: #fff;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  left: 40px; /* match input horizontal padding */
+  top: 105px; /* position below input + button height */
+}
+
+.suggestions-list li {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.suggestions-list li:hover {
+  background-color: #0072ff;
+  color: white;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: none;
+  background: #0072ff;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.card button:hover {
+  background: #005bb5;
+}
+
+.error-message {
+  color: #d93025;
+  margin-top: 10px;
+  font-size: 14px;
+  min-height: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+#loading {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #0072ff;
+  animation: pulse 1.5s infinite;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+#weatherDetails {
+  margin-top: 25px;
+  color: #333;
+  position: relative;
+  z-index: 2;
+}
+
+#city {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #0072ff;
+}
+
+.temp-weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+#weatherIcon {
+  width: 50px;
+  height: 50px;
+}
+
+#temperature {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0072ff;
+  margin: 0;
+}
+
+#weather {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-style: italic;
+  color: #555;
+}
+
+.extra-info {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  color: #444;
+}
+
+.extra-info p {
+  margin: 0;
+  text-align: center;
+  width: 30%;
+}
